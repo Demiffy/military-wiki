@@ -1,0 +1,265 @@
+[
+    {
+      "id": 1,
+      "name": "F-22 Raptor",
+      "image": "/images/f22.jpg",
+      "flag": "/images/flags/usa.png",
+      "schema": "/images/schemas/f22schema.jpg",
+      "developer": "Lockheed Martin",
+      "description": "A fifth-generation fighter aircraft developed by Lockheed Martin for the United States Air Force. Known for its stealth capabilities, advanced avionics, and unmatched maneuverability.",
+      "specifications": {
+        "Speed": "1,500 mph",
+        "Range": "1,839 miles",
+        "Engine": "2x Pratt & Whitney F119-PW-100 - 35,000 lbf with afterburner each",
+        "Crew": "1",
+        "Length": "62 ft 1 in",
+        "Wingspan": "44 ft 6 in",
+        "Height": "16 ft 8 in",
+        "Max takeoff weight": "83,500 lb",
+        "Country of origin": "United States",
+        "First flight": "September 7, 1997",
+        "Introduced": "December 15, 2005",
+        "Number built": "195",
+        "Era": "Modern",
+        "Propulsion": "Jet",
+        "Mach capable": "Yes"
+      },
+      "armament": {
+        "Guns": "1x M61A2 Vulcan 20mm rotary cannon",
+        "Air-to-air missiles": [
+          "6x AIM-120 AMRAAM",
+          "2x AIM-9 Sidewinder"
+        ],
+        "Air-to-ground weapons": [
+          "2x 1,000 lb JDAM",
+          "8x GBU-39 Small Diameter Bombs"
+        ],
+        "External hardpoints": "4, can carry up to 5,000 lb of ordnance"
+      },
+      "avionics": {
+        "Radar": "AN/APG-77 AESA",
+        "Sensor suite": "AN/ALR-94 radar warning receiver, AN/AAR-56 missile launch detector",
+        "Communications": "INTRA-flight data link, Link-16"
+      },
+      "stealth features": {
+        "Radar cross-section": "Extremely low",
+        "Infrared signature": "Minimized through design and materials"
+      },
+      "maneuverability": {
+        "Thrust vectoring": "Yes, pitch only",
+        "Supercruise": "Yes, Mach 1.5 without afterburners"
+      },
+      "role": "Air superiority, multi-role fighter",
+      "development history": {
+        "Program origin": "Advanced Tactical Fighter (ATF) program",
+        "Contract awarded": "April 1991 to Lockheed Martin",
+        "Cost per unit": "Approximately $150 million (flyaway cost)"
+      },
+      "deployment": {
+        "First operational squadron": "27th Fighter Squadron, Langley Air Force Base",
+        "Notable deployments": [
+          "Operation Noble Eagle",
+          "Operation Inherent Resolve"
+        ],
+        "International exercises": [
+          "Red Flag",
+          "Northern Edge"
+        ]
+      },
+      "additionalInfo": "The F-22 Raptor is considered one of the most advanced fighter jets in the world. Developed by Lockheed Martin, it is known for its stealth capabilities, supercruise, and advanced avionics. The F-22 was introduced in 2005 and has since been a critical component of the United States Air Force. Its design incorporates stealth technology to reduce its radar cross-section and infrared signature, making it less detectable to enemy forces. The F-22 also features highly integrated avionics systems, allowing for superior situational awareness and combat effectiveness. Its ability to engage in both air-to-air and air-to-ground missions makes it a versatile and powerful asset in modern warfare. Additionally, the F-22 can perform supersonic flight without afterburners, known as supercruise, which allows it to maintain high speeds with lower fuel consumption. Despite its advanced capabilities, the F-22 program faced several challenges, including high production costs and limited production numbers, with only 195 units built. However, it remains a crucial element of the US air superiority strategy. The F-22's participation in international exercises like Red Flag and Northern Edge showcases its capabilities and fosters interoperability with allied nations. Its deployments in operations such as Noble Eagle and Inherent Resolve highlight its operational significance in both defensive and offensive roles."
+    },
+    {
+      "id": 2,
+      "name": "B-2 Spirit",
+      "image": "/images/b2.jpg",
+      "flag": "/images/flags/usa.png",
+      "schema": "/images/schemas/b2schema.jpg",
+      "developer": "Northrop Grumman",
+      "description": "An American heavy strategic bomber developed by Northrop Grumman. Known for its stealth technology, it can carry both conventional and nuclear weapons.",
+      "specifications": {
+        "Speed": "628 mph",
+        "Range": "6,000 miles",
+        "Engine": "4x General Electric F118-GE-100 - 19,000 lbf each",
+        "Crew": "2",
+        "Length": "69 ft",
+        "Wingspan": "172 ft",
+        "Height": "17 ft",
+        "Max takeoff weight": "336,500 lb",
+        "Country of origin": "United States",
+        "First flight": "July 17, 1989",
+        "Introduced": "January 1, 1997",
+        "Number built": "21",
+        "Era": "Modern",
+        "Propulsion": "Jet",
+        "Mach capable": "No"
+      },
+      "armament": {
+        "Bombs": "16x B61 or B83 nuclear bombs, 80x 500 lb Mk 82 JDAM",
+        "Missiles": "36x AGM-158 JASSM",
+        "Additional equipment": "4x GBU-57A/B Massive Ordnance Penetrator"
+      },
+      "avionics": {
+        "Radar": "AN/APQ-181",
+        "Sensor suite": "AN/ZSR-63 passive detection system",
+        "Communications": "Link-16"
+      },
+      "stealth features": {
+        "Radar cross-section": "Extremely low",
+        "Infrared signature": "Minimized through design and materials"
+      },
+      "maneuverability": {
+        "Thrust vectoring": "No",
+        "Supercruise": "No"
+      },
+      "role": "Strategic bomber",
+      "development history": {
+        "Program origin": "Advanced Technology Bomber program",
+        "Contract awarded": "November 1981 to Northrop Grumman",
+        "Cost per unit": "Approximately $737 million (flyaway cost)"
+      },
+      "deployment": {
+        "First operational squadron": "509th Bomb Wing, Whiteman Air Force Base",
+        "Notable deployments": [
+          "Operation Allied Force",
+          "Operation Enduring Freedom"
+        ],
+        "International exercises": [
+          "Red Flag",
+          "Global Thunder"
+        ]
+      },
+      "additionalInfo": "The B-2 Spirit, also known as the Stealth Bomber, is a heavy strategic bomber known for its low observable stealth technology. Developed by Northrop Grumman, it is capable of carrying both conventional and nuclear weapons. The B-2 was first introduced in 1997 and has been an integral part of the U.S. strategic bomber fleet. It can penetrate sophisticated and dense air-defense shields, and its stealth capabilities allow it to perform precision strikes undetected. The B-2 played a key role in several military operations, including Operation Allied Force and Operation Enduring Freedom."
+    },
+    {
+      "id": 3,
+      "name": "Jas 39C Gripen",
+      "image": "/images/gripen.jpg",
+      "flag": "/images/flags/sweden.jpg",
+      "schema": "/images/schemas/gripenschema.png",
+      "developer": "Saab",
+      "description": "A Swedish multi-role fighter aircraft developed by Saab. Known for its agility, advanced avionics, and ease of maintenance.",
+      "specifications": {
+        "Speed": "1,372 mph",
+        "Range": "1,200 miles",
+        "Engine": "Volvo RM12 - 12,100 lbf dry, 18,100 lbf with afterburner",
+        "Crew": "1",
+        "Length": "46 ft 3 in",
+        "Wingspan": "27 ft 7 in",
+        "Height": "14 ft 9 in",
+        "Max takeoff weight": "31,000 lb",
+        "Country of origin": "Sweden",
+        "First flight": "December 9, 1988",
+        "Introduced": "June 9, 1996",
+        "Number built": "271",
+        "Era": "Modern",
+        "Propulsion": "Jet",
+        "Mach capable": "Yes"
+      },
+      "armament": {
+        "Guns": "1x 27 mm Mauser BK-27 revolver cannon",
+        "Air-to-air missiles": [
+          "6x AIM-120 AMRAAM",
+          "4x AIM-9 Sidewinder"
+        ],
+        "Air-to-ground weapons": [
+          "4x GBU-12 Paveway II",
+          "4x GBU-49 Enhanced Paveway II"
+        ],
+        "Additional equipment": "2x RBS-15 anti-ship missiles"
+      },
+      "avionics": {
+        "Radar": "PS-05/A pulse-Doppler radar",
+        "Sensor suite": "Infrared search and track (IRST)",
+        "Communications": "Link-16"
+      },
+      "stealth features": {
+        "Radar cross-section": "Low",
+        "Infrared signature": "Minimized through design and materials"
+      },
+      "maneuverability": {
+        "Thrust vectoring": "No",
+        "Supercruise": "Yes, Mach 1.1 with weapons load"
+      },
+      "role": "Multi-role fighter",
+      "development history": {
+        "Program origin": "Swedish Air Force modernisation",
+        "Contract awarded": "1982 to Saab",
+        "Cost per unit": "Approximately $40 million"
+      },
+      "deployment": {
+        "First operational squadron": "F7 Wing, Såtenäs",
+        "Notable deployments": [
+          "Libyan Civil War",
+          "Baltic Air Policing"
+        ],
+        "International exercises": [
+          "Arctic Challenge Exercise",
+          "Red Flag Alaska"
+        ]
+      },
+      "additionalInfo": "The Gripen is a versatile and cost-effective fighter aircraft developed by Saab. It is known for its agility, advanced avionics, and ease of maintenance. The Gripen has been exported to several countries and has seen combat in various conflicts. Its multi-role capabilities allow it to perform air-to-air, air-to-ground, and reconnaissance missions effectively."
+    },
+    {
+      "id": 4,
+      "name": "Su-11",
+      "image": "/images/su11.jpg",
+      "flag": "/images/flags/ussr.png",
+      "schema": "/images/schemas/su11schema.jpg",
+      "developer": "Sukhoi",
+      "description": "A Soviet-era interceptor aircraft developed by the Sukhoi Design Bureau. Known for its speed and altitude capabilities.",
+      "specifications": {
+        "Speed": "1,320 mph",
+        "Range": "715 miles",
+        "Engine": "2x Tumansky R-11F2-300 - 13,230 lbf each",
+        "Crew": "1",
+        "Length": "62 ft 1 in",
+        "Wingspan": "29 ft 10 in",
+        "Height": "14 ft 1 in",
+        "Max takeoff weight": "38,800 lb",
+        "Country of origin": "Soviet Union",
+        "First flight": "1958",
+        "Introduced": "1962",
+        "Number built": "108",
+        "Era": "Cold War",
+        "Propulsion": "Jet",
+        "Mach capable": "Yes"
+      },
+      "armament": {
+        "Guns": "1x 30 mm NR-30 cannon",
+        "Air-to-air missiles": [
+          "2x K-8 (AA-3 'Anab')"
+        ],
+        "Additional equipment": "None"
+      },
+      "avionics": {
+        "Radar": "RP-9U 'Sapfir' radar",
+        "Sensor suite": "None specified",
+        "Communications": "Standard radio equipment"
+      },
+      "stealth features": {
+        "Radar cross-section": "Not applicable",
+        "Infrared signature": "Standard for the era"
+      },
+      "maneuverability": {
+        "Thrust vectoring": "No",
+        "Supercruise": "No"
+      },
+      "role": "Interceptor",
+      "development history": {
+        "Program origin": "Development of an advanced interceptor to replace the Su-9",
+        "Contract awarded": "1956",
+        "Cost per unit": "Not specified"
+      },
+      "deployment": {
+        "First operational squadron": "Not specified",
+        "Notable deployments": [
+          "Cold War interception missions"
+        ],
+        "International exercises": [
+          "None"
+        ]
+      },
+      "additionalInfo": "The Su-11 was a development of the earlier Su-9 'Fishpot' and was designed to intercept enemy bombers and reconnaissance aircraft at high altitudes. Despite its advancements, it saw limited production and service compared to its predecessors and successors."
+    }
+  ]
+  

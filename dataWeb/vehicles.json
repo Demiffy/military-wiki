@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Sample Vehicle 1",
+      "description": "This is a sample vehicle description 1.",
+      "image": "https://via.placeholder.com/300",
+      "type": "car"
+    },
+    {
+      "id": 2,
+      "name": "Sample Vehicle 2",
+      "description": "This is a sample vehicle description 2.",
+      "image": "https://via.placeholder.com/300",
+      "type": "truck"
+    }
+  ]
+  

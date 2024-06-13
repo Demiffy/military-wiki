@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Cards App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Vehicle Cards App</h1>
+  <div id="editor-container">
+    <input type="file" id="file-input" accept=".json" />
+    <textarea id="json-editor" rows="10" cols="50" placeholder="Paste JSON data here..."></textarea>
+    <button id="save-button">Save Changes</button>
+    <button id="download-button">Download JSON</button>
+    <button id="clear-button">Clear Stored Data</button>
+  </div>
+  <div id="cards-container"></div>
+  <div id="vehicle-details" class="details"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

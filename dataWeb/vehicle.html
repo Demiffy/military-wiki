@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="details">
+    <h1>Vehicle Details</h1>
+    <div id="vehicle-details"></div>
+  </div>
+
+  <script>
+    // Extract URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    // Load the data from localStorage
+    const vehiclesData = JSON.parse(localStorage.getItem('vehicles'));
+
+    // Find the specific vehicle by ID
+    const vehicle = vehiclesData ? vehiclesData.find(v => v.id == id) : null;
+
+    // Display the vehicle details
+    const vehicleDetailsContainer = document.getElementById('vehicle-details');
+
+    if (vehicle) {
+      vehicleDetailsContainer.innerHTML = `
+        <img src="${vehicle.image}" alt="${vehicle.name}">
+        <h2>${vehicle.name}</h2>
+        <p><strong>Developer:</strong> ${vehicle.developer}</p>
+        <p><strong>Description:</strong> ${vehicle.description}</p>
+        <h3>Specifications</h3>
+        <div class="specifications">
+          ${vehicle.specifications ? Object.entries(vehicle.specifications).map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`).join('') : '<p>None</p>'}
+        </div>
+        <h3>Armament</h3>
+        <div class="armament">
+          ${vehicle.armament ? Object.entries(vehicle.armament).map(([key, value]) => {
+            if (Array.isArray(value)) {
+              return `<p><strong>${key}:</strong> ${value.join(', ')}</p>`;
+            }
+            return `<p><strong>${key}:</strong> ${value}</p>`;
+          }).join('') : '<p>None</p>'}
+        </div>
+        <h3>Avionics</h3>
+        <div class="avionics">
+          ${vehicle.avionics ? Object.entries(vehicle.avionics).map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`).join('') : '<p>None</p>'}
+        </div>
+        <h3>Stealth Features</h3>
+        <div class="stealth">
+          ${vehicle.stealth ? Object.entries(vehicle.stealth).map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`).join('') : '<p>None</p>'}
+        </div>
+        <h3>Maneuverability</h3>
+        <div class="maneuverability">
+          ${vehicle.maneuverability ? Object.entries(vehicle.maneuverability).map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`).join('') : '<p>None</p>'}
+        </div>
+        <h3>Role</h3>
+        <p>${vehicle.role}</p>
+        <h3>Development History</h3>
+        <div class="development">
+          ${vehicle.development ? Object.entries(vehicle.development).map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`).join('') : '<p>None</p>'}
+        </div>
+        <h3>Deployment</h3>
+        <div class="deployment">
+          ${vehicle.deployment ? Object.entries(vehicle.deployment).map(([key, value]) => {
+            if (Array.isArray(value)) {
+              return `<p><strong>${key}:</strong> ${value.join(', ')}</p>`;
+            }
+            return `<p><strong>${key}:</strong> ${value}</p>`;
+          }).join('') : '<p>None</p>'}
+        </div>
+        <h3>Additional Info</h3>
+        <p>${vehicle.additionalInfo}</p>
+      `;
+    } else {
+      vehicleDetailsContainer.innerHTML = '<p>Vehicle not found.</p>';
+    }
+  </script>
+</body>
+</html>
