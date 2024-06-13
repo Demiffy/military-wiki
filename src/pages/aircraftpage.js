@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { aircraft } from '../data/aircraft';
-import VehicleCard from '../components/VehicleCard';
+import VehicleCard from '../components/vehiclecard';
 import FilterComponent from '../components/FilterComponent';
 
 const PageContainer = styled.div`
