@@ -10,7 +10,7 @@ const DetailContainer = styled.div`
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
+  max-width: 1400px;  // Increased max-width
   margin: 2rem auto;
   text-align: left;
   animation: fadeIn 0.5s ease-in-out;
@@ -107,7 +107,7 @@ const SpecificationsList = styled.ul`
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr; // Changed to two columns
   gap: 1rem;
 `;
 
@@ -135,6 +135,13 @@ const SpecValue = styled.span`
   flex: 2;
   text-align: left;
   white-space: normal;
+`;
+
+const SchemaImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
 `;
 
 const getVehicle = (type, id) => {
@@ -254,6 +261,12 @@ const VehicleDetailPage = () => {
             <Text><BoldText>First Operational Squadron:</BoldText> {vehicle.deployment['First operational squadron']}</Text>
             <Text><BoldText>Notable Deployments:</BoldText> {vehicle.deployment['Notable deployments']?.join(', ')}</Text>
             <Text><BoldText>International Exercises:</BoldText> {vehicle.deployment['International exercises']?.join(', ')}</Text>
+          </Section>
+        )}
+        {vehicle.schema && (
+          <Section>
+            <SectionTitle>Schema</SectionTitle>
+            <SchemaImage src={vehicle.schema} alt={`${vehicle.name} schema`} />
           </Section>
         )}
         {vehicle.additionalInfo && (

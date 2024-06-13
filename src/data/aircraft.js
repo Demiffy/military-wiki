@@ -5,6 +5,7 @@ export const aircraft = [
     "name": "F-22 Raptor",
     "image": "/images/f22.jpg",
     "flag": "/images/flags/usa.png",
+    "schema": "/images/schemas/f22schema.jpg",
     "developer": "Lockheed Martin",
     "description": "A fifth-generation fighter aircraft developed by Lockheed Martin for the United States Air Force. Known for its stealth capabilities, advanced avionics, and unmatched maneuverability.",
     "specifications": {
@@ -73,6 +74,7 @@ export const aircraft = [
     "name": "B-2 Spirit",
     "image": "/images/b2.jpg",
     "flag": "/images/flags/usa.png",
+    "schema": "/images/schemas/b2schema.jpg",
     "developer": "Northrop Grumman",
     "description": "An American heavy strategic bomber developed by Northrop Grumman. Known for its stealth technology, it can carry both conventional and nuclear weapons.",
     "specifications": {
@@ -134,6 +136,7 @@ export const aircraft = [
     "name": "Jas 39C Gripen",
     "image": "/images/gripen.jpg",
     "flag": "/images/flags/sweden.jpg",
+    "schema": "/images/schemas/gripenschema.png",
     "developer": "Saab",
     "description": "A Swedish multi-role fighter aircraft developed by Saab. Known for its agility, advanced avionics, and ease of maintenance.",
     "specifications": {
@@ -196,5 +199,67 @@ export const aircraft = [
       ]
     },
     "additionalInfo": "The Gripen is a versatile and cost-effective fighter aircraft developed by Saab. It is known for its agility, advanced avionics, and ease of maintenance. The Gripen has been exported to several countries and has seen combat in various conflicts. Its multi-role capabilities allow it to perform air-to-air, air-to-ground, and reconnaissance missions effectively."
+  },
+  {
+    "id": 4,
+    "name": "Su-11",
+    "image": "/images/su11.jpg",
+    "flag": "/images/flags/ussr.png",
+    "developer": "Sukhoi",
+    "description": "A Soviet-era interceptor aircraft developed by the Sukhoi Design Bureau. Known for its speed and altitude capabilities.",
+    "specifications": {
+      "Speed": "1,320 mph",
+      "Range": "715 miles",
+      "Engine": "2x Tumansky R-11F2-300 - 13,230 lbf each",
+      "Crew": "1",
+      "Length": "62 ft 1 in",
+      "Wingspan": "29 ft 10 in",
+      "Height": "14 ft 1 in",
+      "Max takeoff weight": "38,800 lb",
+      "Country of origin": "Soviet Union",
+      "First flight": "1958",
+      "Introduced": "1962",
+      "Number built": "108",
+      "Era": "Cold War",
+      "Propulsion": "Jet",
+      "Mach capable": "Yes"
+    },
+    "armament": {
+      "Guns": "1x 30 mm NR-30 cannon",
+      "Air-to-air missiles": [
+        "2x K-8 (AA-3 'Anab')"
+      ],
+      "Additional equipment": "None"
+    },
+    "avionics": {
+      "Radar": "RP-9U 'Sapfir' radar",
+      "Sensor suite": "None specified",
+      "Communications": "Standard radio equipment"
+    },
+    "stealth features": {
+      "Radar cross-section": "Not applicable",
+      "Infrared signature": "Standard for the era"
+    },
+    "maneuverability": {
+      "Thrust vectoring": "No",
+      "Supercruise": "No"
+    },
+    "role": "Interceptor",
+    "development history": {
+      "Program origin": "Development of an advanced interceptor to replace the Su-9",
+      "Contract awarded": "1956",
+      "Cost per unit": "Not specified"
+    },
+    "deployment": {
+      "First operational squadron": "Not specified",
+      "Notable deployments": [
+        "Cold War interception missions"
+      ],
+      "International exercises": [
+        "None"
+      ]
+    },
+    "additionalInfo": "The Su-11 was a development of the earlier Su-9 'Fishpot' and was designed to intercept enemy bombers and reconnaissance aircraft at high altitudes. Despite its advancements, it saw limited production and service compared to its predecessors and successors."
   }
+  
 ];

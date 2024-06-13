@@ -5,6 +5,7 @@ export const tanks = [
     name: "M1 Abrams",
     image: "/images/m1_abrams.jpg",
     flag: "/images/flags/usa.png",
+    schema: "/images/schemas/m1schema.jpg",
     description: "A third-generation American main battle tank...",
     specifications: {
       speed: "45 mph",
