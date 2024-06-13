@@ -5,11 +5,12 @@ export const aircraft = [
     "name": "F-22 Raptor",
     "image": "/images/f22.jpg",
     "flag": "/images/flags/usa.png",
+    "developer": "Lockheed Martin",
     "description": "A fifth-generation fighter aircraft developed by Lockheed Martin for the United States Air Force. Known for its stealth capabilities, advanced avionics, and unmatched maneuverability.",
     "specifications": {
       "Speed": "1,500 mph",
       "Range": "1,839 miles",
-      "Engine": "2x Pratt & Whitney F119-PW-100",
+      "Engine": "2x Pratt & Whitney F119-PW-100 - 35,000 lbf with afterburner each",
       "Crew": "1",
       "Length": "62 ft 1 in",
       "Wingspan": "44 ft 6 in",
@@ -57,7 +58,7 @@ export const aircraft = [
         "Operation Noble Eagle",
         "Operation Inherent Resolve"
       ],
-      "international exercises": [
+      "International exercises": [
         "Red Flag",
         "Northern Edge"
       ]
@@ -69,25 +70,122 @@ export const aircraft = [
     "name": "B-2 Spirit",
     "image": "/images/b2.jpg",
     "flag": "/images/flags/usa.png",
-    "description": "An American heavy strategic bomber...",
+    "developer": "Northrop Grumman",
+    "description": "An American heavy strategic bomber developed by Northrop Grumman. Known for its stealth technology, it can carry both conventional and nuclear weapons.",
     "specifications": {
       "Speed": "628 mph",
       "Range": "6,000 miles",
-      // more specs...
+      "Engine": "4x General Electric F118-GE-100 - 19,000 lbf each",
+      "Crew": "2",
+      "Length": "69 ft",
+      "Wingspan": "172 ft",
+      "Height": "17 ft",
+      "Max takeoff weight": "336,500 lb",
+      "Country of origin": "United States",
+      "First flight": "July 17, 1989",
+      "Introduced": "January 1, 1997",
+      "Number built": "21"
     },
-    "additionalInfo": "The B-2 Spirit, also known as the Stealth Bomber, is a heavy strategic bomber known for its low observable stealth technology. Developed by Northrop Grumman, it is capable of carrying both conventional and nuclear weapons. The B-2 was first introduced in 1997 and has been an integral part of the U.S. strategic bomber fleet.",
+    "armament": {
+      "Bombs": "16x B61 or B83 nuclear bombs, 80x 500 lb Mk 82 JDAM",
+      "Missiles": "36x AGM-158 JASSM",
+      "Additional equipment": "4x GBU-57A/B Massive Ordnance Penetrator"
+    },
+    "avionics": {
+      "Radar": "AN/APQ-181",
+      "Sensor suite": "AN/ZSR-63 passive detection system",
+      "Communications": "Link-16"
+    },
+    "stealth features": {
+      "Radar cross-section": "Extremely low",
+      "Infrared signature": "Minimized through design and materials"
+    },
+    "maneuverability": {
+      "Thrust vectoring": "No",
+      "Supercruise": "No"
+    },
+    "role": "Strategic bomber",
+    "development history": {
+      "Program origin": "Advanced Technology Bomber program",
+      "Contract awarded": "November 1981 to Northrop Grumman",
+      "Cost per unit": "Approximately $737 million (flyaway cost)"
+    },
+    "deployment": {
+      "First operational squadron": "509th Bomb Wing, Whiteman Air Force Base",
+      "Notable deployments": [
+        "Operation Allied Force",
+        "Operation Enduring Freedom"
+      ],
+      "International exercises": [
+        "Red Flag",
+        "Global Thunder"
+      ]
+    },
+    "additionalInfo": "The B-2 Spirit, also known as the Stealth Bomber, is a heavy strategic bomber known for its low observable stealth technology. Developed by Northrop Grumman, it is capable of carrying both conventional and nuclear weapons. The B-2 was first introduced in 1997 and has been an integral part of the U.S. strategic bomber fleet. It can penetrate sophisticated and dense air-defense shields, and its stealth capabilities allow it to perform precision strikes undetected. The B-2 played a key role in several military operations, including Operation Allied Force and Operation Enduring Freedom."
   },
   {
     "id": 3,
     "name": "Jas 39C Gripen",
     "image": "/images/gripen.jpg",
     "flag": "/images/flags/sweden.jpg",
-    "description": "A Swedish multi-role fighter aircraft...",
+    "developer": "Saab",
+    "description": "A Swedish multi-role fighter aircraft developed by Saab. Known for its agility, advanced avionics, and ease of maintenance.",
     "specifications": {
       "Speed": "1,372 mph",
       "Range": "1,200 miles",
-      // more specs...
+      "Engine": "Volvo RM12 - 12,100 lbf dry, 18,100 lbf with afterburner",
+      "Crew": "1",
+      "Length": "46 ft 3 in",
+      "Wingspan": "27 ft 7 in",
+      "Height": "14 ft 9 in",
+      "Max takeoff weight": "31,000 lb",
+      "Country of origin": "Sweden",
+      "First flight": "December 9, 1988",
+      "Introduced": "June 9, 1996",
+      "Number built": "271"
     },
-    "additionalInfo": "The Gripen is a versatile and cost-effective fighter aircraft developed by Saab. It is known for its agility, advanced avionics, and ease of maintenance. The Gripen has been exported to several countries and has seen combat in various conflicts.",
+    "armament": {
+      "Guns": "1x 27 mm Mauser BK-27 revolver cannon",
+      "Air-to-air missiles": [
+        "6x AIM-120 AMRAAM",
+        "4x AIM-9 Sidewinder"
+      ],
+      "Air-to-ground weapons": [
+        "4x GBU-12 Paveway II",
+        "4x GBU-49 Enhanced Paveway II"
+      ],
+      "Additional equipment": "2x RBS-15 anti-ship missiles"
+    },
+    "avionics": {
+      "Radar": "PS-05/A pulse-Doppler radar",
+      "Sensor suite": "Infrared search and track (IRST)",
+      "Communications": "Link-16"
+    },
+    "stealth features": {
+      "Radar cross-section": "Low",
+      "Infrared signature": "Minimized through design and materials"
+    },
+    "maneuverability": {
+      "Thrust vectoring": "No",
+      "Supercruise": "Yes, Mach 1.1 with weapons load"
+    },
+    "role": "Multi-role fighter",
+    "development history": {
+      "Program origin": "Swedish Air Force modernisation",
+      "Contract awarded": "1982 to Saab",
+      "Cost per unit": "Approximately $40 million"
+    },
+    "deployment": {
+      "First operational squadron": "F7 Wing, Såtenäs",
+      "Notable deployments": [
+        "Libyan Civil War",
+        "Baltic Air Policing"
+      ],
+      "International exercises": [
+        "Arctic Challenge Exercise",
+        "Red Flag Alaska"
+      ]
+    },
+    "additionalInfo": "The Gripen is a versatile and cost-effective fighter aircraft developed by Saab. It is known for its agility, advanced avionics, and ease of maintenance. The Gripen has been exported to several countries and has seen combat in various conflicts. Its multi-role capabilities allow it to perform air-to-air, air-to-ground, and reconnaissance missions effectively."
   }
 ];

@@ -58,6 +58,14 @@ const VehicleName = styled.h1`
   margin: 0;
 `;
 
+const Developer = styled.h2`
+  font-size: 1rem;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  margin-top: 0.5rem;
+`;
+
 const Flag = styled.img`
   width: 50px;
   height: auto;
@@ -99,21 +107,20 @@ const SpecificationsList = styled.ul`
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
 `;
 
 const SpecItem = styled.li`
-  font-size: 1rem;
-  color: #555;
-  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  white-space: nowrap;
   font-family: 'Open Sans', sans-serif;
 `;
 
@@ -121,15 +128,13 @@ const SpecKey = styled.span`
   font-weight: bold;
   flex: 1;
   text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-right: 1rem;
 `;
 
 const SpecValue = styled.span`
-  flex: 1;
-  text-align: right;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex: 2;
+  text-align: left;
+  white-space: normal;
 `;
 
 const getVehicle = (type, id) => {
@@ -140,6 +145,36 @@ const getVehicle = (type, id) => {
     return tanks.find((v) => v.id === parseInt(id));
   }
   return null;
+};
+
+const renderArmament = (armament) => {
+  if (!armament) return null;
+
+  const armamentElements = [];
+
+  if (armament.Guns) {
+    armamentElements.push(<Text key="Guns"><BoldText>Guns:</BoldText> {armament.Guns}</Text>);
+  }
+  if (armament["Air-to-air missiles"]) {
+    armamentElements.push(<Text key="Air-to-air missiles"><BoldText>Air-to-Air Missiles:</BoldText> {armament["Air-to-air missiles"].join(', ')}</Text>);
+  }
+  if (armament["Air-to-ground weapons"]) {
+    armamentElements.push(<Text key="Air-to-ground weapons"><BoldText>Air-to-Ground Weapons:</BoldText> {armament["Air-to-ground weapons"].join(', ')}</Text>);
+  }
+  if (armament["External hardpoints"]) {
+    armamentElements.push(<Text key="External hardpoints"><BoldText>External Hardpoints:</BoldText> {armament["External hardpoints"]}</Text>);
+  }
+  if (armament.Bombs) {
+    armamentElements.push(<Text key="Bombs"><BoldText>Bombs:</BoldText> {armament.Bombs}</Text>);
+  }
+  if (armament.Missiles) {
+    armamentElements.push(<Text key="Missiles"><BoldText>Missiles:</BoldText> {armament.Missiles}</Text>);
+  }
+  if (armament["Additional equipment"]) {
+    armamentElements.push(<Text key="Additional equipment"><BoldText>Additional Equipment:</BoldText> {armament["Additional equipment"]}</Text>);
+  }
+
+  return armamentElements;
 };
 
 const VehicleDetailPage = () => {
@@ -154,6 +189,7 @@ const VehicleDetailPage = () => {
         <VehicleImage src={vehicle.image} alt={vehicle.name} />
         <Title>
           <VehicleName>{vehicle.name}</VehicleName>
+          <Developer>Developed by {vehicle.developer}</Developer>
           <Flag src={vehicle.flag} alt={`${vehicle.specifications['Country of origin']} flag`} />
         </Title>
       </Header>
@@ -173,10 +209,7 @@ const VehicleDetailPage = () => {
         {vehicle.armament && (
           <Section>
             <SectionTitle>Armament</SectionTitle>
-            <Text><BoldText>Guns:</BoldText> {vehicle.armament.Guns}</Text>
-            <Text><BoldText>Air-to-Air Missiles:</BoldText> {vehicle.armament['Air-to-air missiles']?.join(', ')}</Text>
-            <Text><BoldText>Air-to-Ground Weapons:</BoldText> {vehicle.armament['Air-to-ground weapons']?.join(', ')}</Text>
-            <Text><BoldText>External Hardpoints:</BoldText> {vehicle.armament['External hardpoints']}</Text>
+            {renderArmament(vehicle.armament)}
           </Section>
         )}
         {vehicle.avionics && (
@@ -220,7 +253,7 @@ const VehicleDetailPage = () => {
             <SectionTitle>Deployment</SectionTitle>
             <Text><BoldText>First Operational Squadron:</BoldText> {vehicle.deployment['First operational squadron']}</Text>
             <Text><BoldText>Notable Deployments:</BoldText> {vehicle.deployment['Notable deployments']?.join(', ')}</Text>
-            <Text><BoldText>International Exercises:</BoldText> {vehicle.deployment['international exercises']?.join(', ')}</Text>
+            <Text><BoldText>International Exercises:</BoldText> {vehicle.deployment['International exercises']?.join(', ')}</Text>
           </Section>
         )}
         {vehicle.additionalInfo && (
