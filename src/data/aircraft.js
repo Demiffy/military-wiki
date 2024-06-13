@@ -19,7 +19,10 @@ export const aircraft = [
       "Country of origin": "United States",
       "First flight": "September 7, 1997",
       "Introduced": "December 15, 2005",
-      "Number built": "195"
+      "Number built": "195",
+      "Era": "Modern",
+      "Propulsion": "Jet",
+      "Mach capable": "Yes"
     },
     "armament": {
       "Guns": "1x M61A2 Vulcan 20mm rotary cannon",
@@ -84,7 +87,10 @@ export const aircraft = [
       "Country of origin": "United States",
       "First flight": "July 17, 1989",
       "Introduced": "January 1, 1997",
-      "Number built": "21"
+      "Number built": "21",
+      "Era": "Modern",
+      "Propulsion": "Jet",
+      "Mach capable": "No"
     },
     "armament": {
       "Bombs": "16x B61 or B83 nuclear bombs, 80x 500 lb Mk 82 JDAM",
@@ -142,7 +148,10 @@ export const aircraft = [
       "Country of origin": "Sweden",
       "First flight": "December 9, 1988",
       "Introduced": "June 9, 1996",
-      "Number built": "271"
+      "Number built": "271",
+      "Era": "Modern",
+      "Propulsion": "Jet",
+      "Mach capable": "Yes"
     },
     "armament": {
       "Guns": "1x 27 mm Mauser BK-27 revolver cannon",

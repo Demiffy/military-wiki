@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { aircraft } from '../data/aircraft'; // Make sure the path is correct
+import { tanks } from '../data/tanks'; // Make sure the path is correct
 
 const Navbar = styled.header`
   background-color: #282c34;
@@ -101,7 +102,7 @@ const Suggestions = styled.ul`
 const SuggestionItem = styled.li`
   padding: 0.5rem;
   cursor: pointer;
-  color: black; /* Change suggestion text color to black */
+  color: black;
   &:hover {
     background: #f5f5f5;
   }
@@ -117,19 +118,37 @@ const Header = () => {
     setSearchTerm(value);
 
     if (value.length > 0) {
-      const filteredSuggestions = aircraft.filter((aircraft) =>
-        aircraft.name.toLowerCase().includes(value.toLowerCase())
+      const filteredAircraft = aircraft.filter((item) =>
+        item.name.toLowerCase().includes(value.toLowerCase())
       );
-      setSuggestions(filteredSuggestions);
+      const filteredTanks = tanks.filter((item) =>
+        item.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setSuggestions([...filteredAircraft, ...filteredTanks]);
     } else {
       setSuggestions([]);
     }
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setSearchTerm(suggestion.name);
+    setSearchTerm('');
     setSuggestions([]);
-    navigate(`/vehicle/aircraft/${suggestion.id}`); // Update URL format
+    const type = aircraft.includes(suggestion) ? 'aircraft' : 'tanks';
+    navigate(`/vehicle/${type}/${suggestion.id}`);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      const suggestion = suggestions.find(
+        (item) => item.name.toLowerCase() === searchTerm.toLowerCase()
+      );
+      if (suggestion) {
+        setSearchTerm('');
+        setSuggestions([]);
+        const type = aircraft.includes(suggestion) ? 'aircraft' : 'tanks';
+        navigate(`/vehicle/${type}/${suggestion.id}`);
+      }
+    }
   };
 
   return (
@@ -156,7 +175,8 @@ const Header = () => {
           type="text"
           value={searchTerm}
           onChange={handleChange}
-          placeholder="Search for aircraft..."
+          onKeyPress={handleKeyPress}
+          placeholder="Search for vehicles..."
         />
         {suggestions.length > 0 && (
           <Suggestions>
